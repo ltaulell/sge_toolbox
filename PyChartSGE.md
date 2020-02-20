@@ -19,14 +19,14 @@ Web (python). No authentication. Select, display.
 
 ### Charts
 
-Par année civile, ou par période (date de début, date de fin) :
+* Par année civile, ou par période (date de début, date de fin) :
     * total executed jobs
     * total executed hours
     * average job memory usage
     * average job execution time
     * average job queued time
 
-par utilisateur (login), groupe, métagroupe (groupe de groupes) :
+* par utilisateur (login), groupe, métagroupe (groupe de groupes) :
     * nb de jobs
     * durées (min, max, med, moy)
     * cpu vs système (I/O ? ratio % ?)
@@ -34,7 +34,7 @@ par utilisateur (login), groupe, métagroupe (groupe de groupes) :
     * job execution time
     * job queued time
 
-par cluster(s), file(s) d'attentes, nodes :
+* par cluster(s), file(s) d'attentes, nodes :
     * nb de jobs
     * durées (min, max, med, moy)
     * cpu vs système (I/O ? ratio % ?)
@@ -42,15 +42,15 @@ par cluster(s), file(s) d'attentes, nodes :
     * job execution time
     * job queued time
 
-Top 10 : (les + utilisés)
+* Top 10 : (les + utilisés)
     * users
     * métagroups
 
-Inverted Top 10 : (les - utilisés)
+* Inverted Top 10 : (les - utilisés)
     * queue(s)
     * node(s)
 
-Autres :
+* Autres :
     * par projets (SGE projects ou groupes)
     * Queue slots-per-job usage (nb de slots/job)
 
