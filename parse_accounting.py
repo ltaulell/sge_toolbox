@@ -1,7 +1,7 @@
-#!/usr/bin/python3
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python3
+# coding: utf-8
 
-# PSMN: $Id: parse_accounting.py | Wed Sep 27 17:55:07 2017 +0200 | Loïs Taulelle  $
+# PSMN: $Id: parse_accounting.py 944 2019-02-01 11:33:30Z gruiick $
 # SPDX-License-Identifier: CECILL-B OR BSD-2-Clause
 
 """
@@ -23,7 +23,7 @@ import argparse
 import datetime
 
 
-def filtreDate(ligne):
+def filtre_date(ligne):
     """
         filter line against args.* and import into the list of lists
     """
@@ -34,19 +34,21 @@ def filtreDate(ligne):
         if args.e and butoir <= fin:
             if args.d:
                 print(debut, "< ", butoir, "< ", fin)
-            filtreLigne(ligne)
+            filtre_ligne(ligne)
         elif not args.e:
-            filtreLigne(ligne)
+            filtre_ligne(ligne)
     elif not args.b:
         if args.e and butoir <= fin:
-            filtreLigne(ligne)
+            filtre_ligne(ligne)
         elif not args.e:
-            filtreLigne(ligne)
+            filtre_ligne(ligne)
 
 
-def filtreLigne(ligne):
-    # filtering discriminative AND restrictive
-    # first all 4 args, then 3 args, then 2 args, then 1 args, then none of all.
+def filtre_ligne(ligne):
+    """
+    filtering discriminative AND restrictive
+    first all 4 args, then 3 args, then 2 args, then 1 args, then none of all.
+    """
     # if user and group and queue and project
     if args.u and args.g and args.q and args.P:
         if user == ligne[3] and group == ligne[2] and queue in ligne[0] and projet == ligne[31]:
@@ -195,7 +197,7 @@ with open(ifile, "r", encoding='latin1') as fichier:
             # if args.d:
             #    print(line)
             #    print()
-            filtreDate(line)
+            filtre_date(line)
     # debug
     # if args.d:
     #    if nbline >= 10:
@@ -206,7 +208,7 @@ with open(ifile, "r", encoding='latin1') as fichier:
 """
     Print out the lines that passed all tests
 """
-# debug de brutasse (kind of mountain troll)
+# debug de brutasse
 # awk -F':'  '{SUM += $15} END {print SUM/3600}' accounting => utime
 # awk -F':'  '{SUM += $37} END {print SUM/3600}' accounting => cpu
 if args.d:
