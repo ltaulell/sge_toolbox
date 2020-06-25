@@ -1,7 +1,8 @@
 # SGE toolbox
 
-[SGE](https://arc.liv.ac.uk/trac/SGE) sysadmin toolbox from [PSMN HPC center](http://www.ens-lyon.fr/PSMN/), 
-ENS de Lyon, Lyon.
+[SGE](https://arc.liv.ac.uk/trac/SGE) sysadmin toolbox from PSMN HPC center.
+
+[PSMN](http://www.ens-lyon.fr/PSMN/) is "Pôle Scientifique de Modélisation Numérique", the Computing Center and "MesoCentre" of [École Normale Supérieure de Lyon](http://www.ens-lyon.fr/en/).
 
 Mainly scripts in bash and python...
 
