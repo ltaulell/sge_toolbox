@@ -6,12 +6,7 @@
 
 Mainly scripts in bash and python...
 
-This is a public mirror (carbon-copy), not the main development repository.
-(As keywords don't work with git, commit messages will/may not be relevant...)
-
-[Main repo URL](https://sourcesup.renater.fr/psmn-public/)
-
-This might change in the future. You can address issues and requests on github.
+This is an archive repository, as PSMN no longer use SGE.
 
 ## Usefull links & tips
 
